@@ -28,19 +28,8 @@ model = load_model()
 # This dictionary will hold all inputs from the user.
 user_input = {}
 
-# # --- Sidebar Configuration ---
-# st.sidebar.title("⚙️ Configuration")
-# forecast_window = st.sidebar.slider(
-#     "Forecast Window (years ahead)", 
-#     min_value=1, 
-#     max_value=5, 
-#     value=1, 
-#     help="Select the prediction horizon. This is a key factor for the model."
-# )
-# # One-hot encode the forecast window based on user selection.
-# user_input.update({f"fw_{i}": 1 if forecast_window == i else 0 for i in range(1, 6)})
 
-# --- Forecast Window on Main Page ---
+# --- Forecast Window ---
 st.markdown("###  Forecast Settings")
 forecast_window = st.slider(
     "Forecast Window (years ahead)", 
